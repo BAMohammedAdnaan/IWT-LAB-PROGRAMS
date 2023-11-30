@@ -1,0 +1,70 @@
+<html>
+<head><title>Iadc Restaurant</title>
+<script>
+function bill(){
+    main=document.getElementById("main");
+    starter=document.getElementById("starter");
+    soft=document.getElementById("soft");
+    msg="item   cost\n";
+    total=0;
+for(i=0;i<main.options.length;i++)
+{
+    ch=main.options[i];
+    if(ch.selected == true)
+{
+   price=parseInt(ch.value);
+   total=total+price;
+   msg=msg+ch.text+" "+price+"\n";
+}
+}
+for(i=0;i<starter.options.length;i++)
+{
+    ch=starter.options[i];
+    if(ch.selected == true)
+{
+   price=parseInt(ch.value);
+   total=total+price;
+   msg=msg+ch.text+" "+price+"\n";
+}
+}
+for(i=0;i<soft.options.length;i++)
+{
+    ch=soft.options[i];
+    if(ch.selected == true)
+{
+   price=parseInt(ch.value);;
+   total=total+price;
+   msg=msg+ch.text+" "+price+"\n";
+}
+}
+msg=msg+"total cost"+total;
+document.getElementById("disp").value=msg;
+}
+</script>
+</head>
+<body>
+<form>
+<select id ="main" multiple >
+   <option value="80">Rice</option>
+   <option value="120">paratha</option>
+    <option value="250">kulcha</option>
+    <option value="150">Paneer</option>
+</select><br />
+<select id ="starter" multiple>
+     <option value="100">butter chicken</option>
+     <option value="130">tandoori</option>
+     <option value="140">grilled chicken</option>
+     <option value="160">malai tikka</option>
+</select><br />
+<select id ="soft" multiple>
+      <option value="40">Coke</option>
+       <option value="200">Heineken</option>
+      <option value="110">Budweiser</option> 
+      <option value="105">Red bull</option>
+</select><br />
+<textarea rows=5 cols=50 id="disp"></textarea><br />
+<Input type="button" onclick="bill()" value="submit">
+<input type="reset" value="reset">
+</body>
+</html>
+

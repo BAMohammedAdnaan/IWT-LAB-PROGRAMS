@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+  function disp(id){
+d=document.getElementById(id);
+d.style.zIndex=10;
+}
+function hide(id)
+{
+d=document.getElementById(id);
+d.style.zIndex=0;
+}
+</script>
+
+<style>
+.img1{
+        height:100px;
+        width:100px;
+        z-index:0;
+        position:absolute;
+        top:10px;
+        left:10px;
+}
+.img2{
+        height:100px;
+        width:100px;
+        z-index:0;
+        position:absolute;
+        top:50px;
+        left:50px;
+}
+.img3{
+        height:100px;
+        width:100px;
+        z-index:0;
+        position:absolute;
+        top:100px;
+        left:100px;
+}
+</style>
+</head>
+<body>
+<img src="F:\personal\birthcertificate.jpg" class="img1" id="1" onmouseover="disp('1')" onmouseout="hide('1')">
+<img src="F:\personal\pass2.jpg" class="img2" id="2" onmouseover="disp('2')" onmouseout="hide('2')">
+<img src="F:\personal\pass.jpg" class="img3" id="3" onmouseover="disp('3')" onmouseout="hide('3')">
+</body>
+</html>
+
+

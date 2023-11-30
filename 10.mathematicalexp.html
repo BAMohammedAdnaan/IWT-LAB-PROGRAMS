@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>expression</title>
+<script>
+function check(){
+ dom=document.getElementById('exp1').value;
+
+ e=eval(dom);
+alert("Result = "+e);  
+
+}
+</script>
+</head>
+<body>
+<form>
+<label>Enter an expresssion</label>
+<input type ="text" name="exp"  id ="exp1"><br />
+<input type= "button"  onclick="check()" value="Evaluate">
+</form>
+
+</body>
+</html>

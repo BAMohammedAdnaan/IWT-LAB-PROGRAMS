@@ -1,0 +1,40 @@
+//create a form for employee information. write js code to find da, hrf ,pf , tax, gross pay, deduction and net pay
+<html>
+<head>
+<title>Employee information</title>
+</head>
+<body>
+<form>
+<label>Employee information</label><br><br/>
+Name <input type="text" id="name"><br><br/>
+Basicpay <input type="text" id="bp"><br></br>
+<input type="Button" value="calculate" onclick="calc()"> <br><br/>
+DA <input type="text" id="da"><br></br>
+HRA <input type="text" id="hra"><br></br>
+PF <input type="text" id="pf"><br></br>
+TAX <input type="text" id="tax"><br></br>
+Grosspay <input type="text" id="gp"><br></br>
+Deduction <input type="text" id="ded"><br></br>
+Netpay <input type="text" id="np"<br></br>
+</form>
+<script>
+function calc(){
+bp=parseFloat(document.getElementById("bp").value);
+da=(10/100)*bp;
+document.getElementById("da").value=da;
+hra=(15/100)*bp;
+document.getElementById("hra").value=hra;
+pf=(18/100)*bp;
+document.getElementById("pf").value=pf;
+tax=200;
+document.getElementById("tax").value=tax;
+gp=bp+da+hra;
+document.getElementById("gp").value=gp;
+ded=tax+pf;
+document.getElementById("ded").value=ded;
+np=gp+ded;
+document.getElementById("np").value=np;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head><script>
+function count(){
+n=document.getElementById("id1").length;
+alert("no of elements"+n);
+}
+</script>
+<title>Student registration form</title>
+</head>
+<body>
+<form id="id1">
+<label>Name</label>
+<input type ="text" name="name1"><br /><br />
+<label>Gender</label>
+<input type="radio" name="gender" value="m">male
+<input type ="radio" name="gender" value="f">female
+<input type="radio" name="gender" value="o">others<br /><br />
+<label>DOB</label>
+<input type="date"><br /><br />
+course <select>
+      <option>BCA</option>
+      <option>BSC</option>
+      <option>B COM</option>
+</select><br /><br />
+<label> Address</label><br />
+<textarea rows=10 cols=100></textarea><br /><br />
+<label> Phno</label><br />
+<input type="number"><br /><br />
+<label>State</label>
+<select><option>---select---</option>
+               <option>Karnataka</option>
+               <option>Tamil Nadu</option>
+               <option>Maharashtra</option>
+</select><br /><br />
+<label>Username</label><br />
+<input type ="text" name="usn"><br />
+<label>Password</label><br />
+<input type="password" name="pswd"><br />
+<label>Re-enter password</label><br />
+<input type="password" name="reenter"><br />
+<label>Language</label><br />
+<input type="checkbox" name="lan" value="k">kan
+<input type="checkbox" name="lan" value="h">hindi<br /> 
+<label>Upload your pic</label><br />
+<input type="file"><br /><br />
+<Input type="submit" onclick="count()" value="submit">
+<input type="reset" value="reset">
+</form>
+</body>
+</html>

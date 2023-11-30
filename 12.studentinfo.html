@@ -1,0 +1,40 @@
+//write java sript code for total result avg grade//
+<html>
+<body>
+<form>
+<label> Student Information</label></br>
+Name<input type="text" id="name"></br>
+Course<input type="text" id="course"></br>
+SE<input type="text" id="SE"></br>
+AI<input type="text" id="AI"></br>
+IWT<input type="text" id="IWT"></br>
+<input type="button" value="calculate" onclick="calc()">
+Total<input type="text" id="tot"></br>
+Average<input type="text" id="avg"></br>
+Result<input type="text" id="res"></br>
+Grade<input type="text" id="gra"></br>
+</form>
+<script>
+function calc(){
+a=parseFloat(document.getElementById("SE").value);
+b=parseFloat(document.getElementById("AI").value);
+c=parseFloat(document.getElementById("IWT").value);
+total=a+b+c;
+document.getElementById("tot").value=total;
+avg=total/3;
+document.getElementById("avg").value=avg;
+if(a<35 || b<35 || c<35)
+	  document.getElementById("res").value="Fail";
+else
+	  document.getElementById("res").value="Pass";
+if(avg>80)
+	  document.getElementById("gra").value="A+";
+else if(avg>60) 
+	  document.getElementById("gra").value="B";
+else if(avg>50)
+	  document.getElementById("gra").value="C";
+}
+</script>
+
+</body>
+</html>
